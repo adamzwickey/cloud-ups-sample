@@ -1,0 +1,12 @@
+---
+applications:
+- name: sample
+  memory: 512M
+  instances: 1
+  host: sample
+  domain: cloudfoundry.dyndns.org
+  path: ./target/vz-sample-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+  services:
+    - vz-ctc-mysql-dev-db
